@@ -1,0 +1,15 @@
+Maze,Size,Goal,Shortest,Speed run,Known,Unknown,Wrong,Team,Result
+T13_no_wallfollow_16x16,16x16,"(7,7)-(8,8)",126,126,643,381,0,T13,PASS
+hs10x6_wide,10x6,"(8,4)",20,20,150,90,0,T13,PASS
+hs12_top_left,12x12,"(0,11)",19,19,230,346,0,T13,PASS
+hs16_centre_loops,16x16,"(7,7)-(8,8)",21,21,349,675,0,T13,PASS
+hs16_far_corner,16x16,"(15,15)",68,68,334,690,0,T13,PASS
+hs4_far_corner,4x4,"(3,3)",6,6,55,9,0,T13,PASS
+hs5_odd_centre,5x5,"(2,2)",8,8,44,56,0,T13,PASS
+hs6_bottom_right,6x6,"(5,0)",11,11,94,50,0,T13,PASS
+hs8_2x2_offcentre,8x8,"(5,5)-(6,6)",15,15,85,171,0,T13,PASS
+practice16_1,16x16,"(7,7)-(8,8)",41,41,323,701,0,T13,PASS
+practice4_1,4x4,"(2,2)",8,8,55,9,0,T13,PASS
+practice8_1,8x8,"(3,3)-(4,4)",16,16,102,154,0,T13,PASS
+practice8_2,8x8,"(3,3)-(4,4)",18,18,134,122,0,T13,PASS
+practice8_offcentre,8x8,"(6,1)",27,27,140,116,0,T13,PASS

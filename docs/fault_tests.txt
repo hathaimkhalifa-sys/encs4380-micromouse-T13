@@ -1,0 +1,55 @@
+=== Test 1: the sensor misses a wall, and the mouse bumps into it
+practice8_1.txt 8x8 goal (3,3)-(4,4)  shortest=16
+  runs to goal: 16 cells/10 turns, 16 cells/12 turns
+  cells driven: 68, resets: 0, map: 102 known / 154 unknown / 0 wrong
+  faults: miss 0,1,N, wrong readings given: 1, crashes: 1
+    solver: blocked at (0,1) facing N, adding the wall
+    solver: map: (0,1) side N changed to wall
+  RECOVERED: goal reached, solver finished; last run 16 cells (shortest 16)
+
+=== Test 2: the sensor misses a wall that the next cell saw correctly
+practice8_1.txt 8x8 goal (3,3)-(4,4)  shortest=16
+  runs to goal: 16 cells/10 turns, 16 cells/12 turns
+  cells driven: 68, resets: 0, map: 102 known / 154 unknown / 0 wrong
+  faults: miss 3,1,W, wrong readings given: 1, crashes: 0
+    solver: map: readings disagree at (3,1) W, keeping the wall
+  RECOVERED: goal reached, solver finished; last run 16 cells (shortest 16)
+
+=== Test 3: the sensor misses a wall the mouse never needs to cross
+practice8_1.txt 8x8 goal (3,3)-(4,4)  shortest=16
+  runs to goal: 16 cells/10 turns, 16 cells/12 turns
+  cells driven: 68, resets: 0, map: 102 known / 154 unknown / 2 wrong
+  faults: miss 3,4,W, wrong readings given: 1, crashes: 0
+  map still wrong at cell (2,4) side E (says open, maze has wall)
+  map still wrong at cell (3,4) side W (says open, maze has wall)
+  RECOVERED: goal reached, solver finished; last run 16 cells (shortest 16)
+
+=== Test 4: the sensor sees a wall that is not there, on the only way to the goal
+practice8_1.txt 8x8 goal (3,3)-(4,4)  shortest=16
+  runs to goal: 16 cells/10 turns, 16 cells/12 turns
+  cells driven: 82, resets: 0, map: 141 known / 115 unknown / 0 wrong
+  faults: phantom 1,1,E, wrong readings given: 1, crashes: 0
+    solver: wall (0,0) E may be a wrong reading, will try it
+    solver: wall (0,1) N may be a wrong reading, will try it
+    solver: wall (1,1) N may be a wrong reading, will try it
+    solver: wall (1,1) E may be a wrong reading, will try it
+    solver: wall (1,1) S may be a wrong reading, will try it
+  RECOVERED: goal reached, solver finished; last run 16 cells (shortest 16)
+
+=== Test 5: the same false wall, seen only once
+practice8_1.txt 8x8 goal (3,3)-(4,4)  shortest=16
+  runs to goal: 16 cells/10 turns, 16 cells/12 turns
+  cells driven: 82, resets: 0, map: 141 known / 115 unknown / 0 wrong
+  faults: phantom 1,1,E, wrong readings given: 1, crashes: 0
+    solver: wall (0,0) E may be a wrong reading, will try it
+    solver: wall (0,1) N may be a wrong reading, will try it
+    solver: wall (1,1) N may be a wrong reading, will try it
+    solver: wall (1,1) E may be a wrong reading, will try it
+    solver: wall (1,1) S may be a wrong reading, will try it
+  RECOVERED: goal reached, solver finished; last run 16 cells (shortest 16)
+
+=== Test 6: the operator presses Reset twice during the run
+practice16_1.txt 16x16 goal (7,7)-(8,8)  shortest=41
+  runs to goal: 41 cells/24 turns, 41 cells/24 turns
+  cells driven: 214, resets: 2, map: 323 known / 701 unknown / 0 wrong
+  PASS
