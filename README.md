@@ -1,5 +1,14 @@
 # ENCS4380 Micromouse: Team T13, Milestone M1
 
+ENCS4380 Interfacing Techniques, Birzeit University, first semester 2026/27. Group ENCS4380-T13-Orion.
+
+| Team member | GitHub username |
+| --- | --- |
+| Sadeen Haddad | `sadeenMoHaddad` |
+| Bisan Ayayda | `bisanayaydah-sys` |
+| Makram Sawaftah | `1230548-a11y` |
+| Haitham Khalifa | `hathaimkhalifa-sys` |
+
 The flood-fill solver passes all 14 test mazes in the mms simulator (14 of 14 PASS): every speed run is a shortest path, and no map dump reports a wrong wall. It also recovers from wrong wall readings and operator resets.
 
 ## Contents
@@ -13,12 +22,13 @@ The flood-fill solver passes all 14 test mazes in the mms simulator (14 of 14 PA
 | `mm_check.py` | Offline checker: compares a map dump with the real maze, builds the results table, injects sensor faults. Not the official grader |
 | `wallfollow_check.py` | Simulates left- and right-hand wall-followers on a maze |
 | `run_one.bat`, `fault_tests.bat` | Windows helpers used for the tests below |
+| `mouse_hal.h`, `mm_internal.h`, `mm_common.c`, `hal_sim.c`, `main_sim.c`, `Makefile`, `example_wallfollow.c`, `mazes/`, `esp32/` | The course starter kit, unchanged (its own README is in `docs/KIT_README.md`) |
 
 ## Build and run
 
 | mms field | Value |
 | --- | --- |
-| Directory | the student folder |
+| Directory | this folder |
 | Build Command | `gcc -O2 -std=c99 -o solver.exe main_sim.c hal_sim.c mm_common.c solver.c` |
 | Run Command | full path to `solver.exe` (Windows) or `./solver` (Linux) |
 
